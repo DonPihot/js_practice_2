@@ -35,9 +35,11 @@ let million = cities.filter(function(item)
 
 let halfMillion = cities.map(item =>{return item.population*1.5})
 
+console.log(halfMillion)
+
 // Number 5:
 
-let allPopulation = cities.reduce((all,item) => {return all + item.population}, 0)
+let allPopulation = halfMillion.reduce((all,item) => {return all + item}, 0)
 
 console.log(allPopulation); 
 
@@ -106,10 +108,7 @@ let arr = [
     }
   ];
 
-for(let i in arr)
-{
-    console.log(arr[i]);
-}
+arr.forEach(item => console.log(item))
 
 let arr_filter = arr.filter(item => {return item["id"] > 4});
 
@@ -117,18 +116,15 @@ console.log(arr_filter);
 
 // Number 7:
 
-for(let j in arr)
+arr.forEach(function(item)
 {
-    console.log(`Title: ${arr[j]["title"]}, Body: ${arr[j]["body"]}`);
-}
+    console.log(`Title: ${item["title"]}, Body: ${item["body"]}`);
+})
 
 arr.forEach(function(item)
 {
     item["title"] = "AG";
 })
 
-for(let i in arr)
-    {
-        console.log(arr[i]);
-    }
+arr.forEach(item => console.log(item))
 
